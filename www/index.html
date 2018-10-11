@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="tt">
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf-8" />
+    	<meta name="format-detection" content="telephone=no" />
+    	<meta name="msapplication-tap-highlight" content="no" />
+    	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    	<link rel="stylesheet" href="ionic/css/ionic.css" />
+    	<script src="ionic/js/ionic.bundle.js"></script>
+    	<link rel="stylesheet" href="css/diyi.css" />
+   		<title></title>
+   		
+	</head>
+	
+	
+	<style>
+		
+		
+	</style>
+	
+				
+			
+		
+		
+	<body ng-controller="cctv">
+		
+	<div>
+		<ion-header-bar class="bar-balanced">
+			<div class="row">
+				<div class="col padding-left"><i>LoGo</i></div>
+				<div class="col" style="text-align: right"><i class="icon ion-android-pin padding" style=""></i>成都</div>
+			</div>
+		</ion-header-bar>
+		
+		
+		<ion-content class="has-header">
+			<ion-slide-box class="item item-image" slide-interval="2000" no-slide-changed="go_changed(index)" active-slide="index" pager-click="go(index)" does-continue="true" auto-play="true" show-pager="true">
+				<ion-slide>
+					<img src="img/j-banner02.jpg"/>
+				</ion-slide>
+				<ion-slide>
+					<img src="img/j-banner04.jpg"/>
+				</ion-slide>
+			</ion-slide-box>
+		
+			<div class="item" style="text-align: center; border-bottom: 2px solid #E7E7E7;">
+				<i class="icon ion-android-bus"></i>
+				<span>仅二十元起送，24小时内极速达</span>
+			</div>
+			
+			<div id="over">
+				
+			</div>
+			
+			<div class="mai">
+					<div class="item-image item-borderless">
+						<img src="img/j-c03.jpg"/>
+					</div>
+					<div class="tuan" >
+						<div class="zhe">
+							<p>3人团</p>
+							<p>2.5折</p>
+						</div>
+						<a href="" class="item item-image"><img src="img/j-c01.jpg"/></a>
+						
+						<h4 class="">越南进口火龙果（2粒）【直降2.80元】</h4>
+						<p class="padding-bottom">外皮红颜张扬，果肉软绵白嫩，汁液丰富，富含维生素C，丰富的水溶性膳食纤维，前者美白皮肤，后者有助减肥，降血糖，润肠，预防肠癌，美容瘦身。</p>
+						<div id="hou">
+							<div id="tuanzi">
+								<b id="tuan1">
+									<h3>团</h3>
+								</b>
+								<div id="sanjiao"></div>
+								<div id="yuan">
+									<span>3人入团只需</span>
+									<b>￥14.00</b>
+								</div>
+								<div id="pin">
+									<a href="" id="an" class="button-assertive">我要拼<i class="icon ion-ios-arrow-right"></i></a>
+								</div>
+								<div id="shanchu">
+									<s>原价￥16.80</s>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					
+			</div>
+			
+			
+		</ion-content>
+		<ion-footer>
+			<div class="tabs tabs-icon-top">
+				<a href="" class="tab-item"><i class="icon ion-ios-home-outline"></i>首页</a>
+				<a href="" class="tab-item"><i class="icon ion-android-hand"></i>我的拼团</a>
+				<a href="" class="tab-item"><i class="icon ion-android-list"></i>我的订单</a>
+				<a href="" class="tab-item"><i class="icon ion-android-person"></i>个人中心</a>
+			</div>
+		</ion-footer>
+			
+	</div>
+		
+		<script>
+			angular.module("tt",['ionic'])
+			.controller("cctv",function($scope,$ionicSlideBoxDelegate){
+				$scope.index=0;
+				$scope.go=function(index){
+					$ionicSlideBoxDelegate.slide(index);
+				}
+//				$scope.go_previous=function(index){
+//					$ionicSlideBoxDegate.previous(index);
+//				}
+//				$scope.go_next=function(index){
+//					$ionicSlideBoxDegate.next(index);
+//				}
+//				$scope.go_changed=function(index){
+//					console.log(index)
+//				}
+			
+			})
+		</script>
+		
+	</body>
+</html>
